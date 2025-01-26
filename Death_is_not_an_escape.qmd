@@ -1,0 +1,53 @@
+---
+title: "Death is not an escape"
+subtitle: "Data visualisation based on the game 'Dead by Daylight'"
+author: "Clara Duchossois"
+date: "2025-01-01"
+format: 
+  revealjs: 
+    theme: dark
+editor: visual
+warnings: false
+title-slide-attributes:
+  data-background-image: /dead-by-daylight-key-art.png
+---
+
+## Introduction {.smaller background-image="/dbd-gallery-background.jpg"}
+
+Data manually collected from my own matches in the online game 'Dead by Daylight' over the year 2021. [Raw CSV file](https://github.com/doubavitch/Dead-by-Daylight-Data-Visualization/blob/main/Dead%20by%20Daylight%20data.csv)
+
+How the game works:
+
+-   1 killer, 4 survivors
+-   Killer: Injure, hook and eventually kill as many survivors as possible
+-   Survivors: Repair generators and try to open the exit gates and escape (only after 5 generators were repaired)
+
+[GitHub repository](https://github.com/doubavitch/Dead-by-Daylight-Data-Visualization)
+
+[More about the game](https://deadbydaylight.com)
+
+## Killer performance is not a criterion for the killers' pick rate {background-image="/dbd-gallery-background.jpg"}
+
+```{r}
+knitr::include_graphics(targets::tar_read(input))
+```
+
+## Speaking of performance... {background-image="/dbd-gallery-background.jpg"}
+
+```{r}
+knitr::include_graphics(targets::tar_read(input_2))
+```
+
+## Best (and worst) map/killer combinations {background-image="/dbd-gallery-background.jpg"}
+
+```{r}
+knitr::include_graphics(targets::tar_read(input_3))
+```
+
+# Thank you for your attention! {background-image="/ash-williams-dead-by-daylight.jpg"}
+
+See you in the Fog...
+
+::: footer
+Special thanks to: Noémie Fourcade, Jessica Lumbanzila, Kilian Parant, Sunny Sur
+:::
