@@ -28,19 +28,19 @@ How the game works:
 
 ## Killer performance is not a criterion for the killers' pick rate {background-image="/dbd-gallery-background.jpg"}
 
-```{r}
+```{r fig.align='center'}
 knitr::include_graphics(targets::tar_read(input))
 ```
 
 ## Speaking of performance... {background-image="/dbd-gallery-background.jpg"}
 
-```{r}
+```{r fig.align='center'}
 knitr::include_graphics(targets::tar_read(input_2))
 ```
 
 ## Best (and worst) map/killer combinations {background-image="/dbd-gallery-background.jpg"}
 
-```{r}
+```{r fig.align='center', fig.width=10, fig.height=6}
 knitr::include_graphics(targets::tar_read(input_3))
 ```
 

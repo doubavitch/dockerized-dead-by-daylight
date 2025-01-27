@@ -141,12 +141,11 @@ list(
       likert_plot <- HH::likert(
         Killer ~ .,
         kills_distrib_perc,
-        main = "Distributions of the kills per killer",
+        main = list(label = "Distributions of the kills per killer", col = "white"),
         ylab = '',
         as.percent = TRUE,
         positive.order = TRUE,
         rightAxis = FALSE,
-        ########### CHANGE FONT COLOUR AND LEGEND POSITION
         trellis.par.set(list(
           background = list(col = "transparent"),  # Set background to transparent
           superpose.text = list(col = "white"),    # Set the text color to white
@@ -155,9 +154,13 @@ list(
           strip.background = list(col = "transparent"),  # Set strip background to transparent
           strip.border = list(col = "transparent"), # Set strip border to transparent
           layout.heights = list(top.padding = 0),  # Remove extra space at the top
-          layout.widths = list(left.padding = 0)   # Remove extra space on the left
+          layout.widths = list(left.padding = 0),   # Remove extra space on the left
+          par.xlab.text = list(col = "white")      # Set the x-axis label (legend) color to white
         )),
-        auto.key = list(text = c("4 kills", "3 kills", "2 kills", "1 kill", "0 kill")),
+        auto.key = list(
+          text = c("4 kills", "3 kills", "2 kills", "1 kill", "0 kill"),
+          col = "white"  # Set legend text color to white
+        ),
         col = c("#5e1914", "#9C2A23", "darkgray", "#2E63A1", "#243b5e")
       )
       
@@ -228,7 +231,8 @@ list(
       ggsave(
         filename = "heatmap.png",
         plot = cor_data_plot,
-        bg = "transparent"
+        bg = "transparent",
+        dpi = 300
       )
       "heatmap.png" # File path
     },
