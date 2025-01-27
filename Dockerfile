@@ -41,6 +41,7 @@ RUN R -e "install.packages(c('renv', 'targets', 'knitr', 'rmarkdown'))"
 RUN R -e "renv::restore()"
 
 # Run the targets pipeline
+RUN mkdir -p /project/.targets && chmod -R 777 /project/.targets
 RUN R -e "targets::tar_make()"
 
 # Expose port 4200 for Quarto preview
