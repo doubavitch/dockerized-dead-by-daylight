@@ -2,7 +2,7 @@
 
 ## How to run this pipeline
 
-- Clone this repository and work within the folder created locally:
+- In your terminal, clone this repository and work within the folder created locally:
 
 ```
 git@github.com:doubavitch/dockerized-dead-by-daylight.git
@@ -17,7 +17,17 @@ docker build -t dead-by-daylight .
 
 Note that this step might take a while the first time (around 40 minutes). This is most due to the use of renv::restore(), a rather time-consuming command.
 
+- Run the pipeline:
 
+```
+docker run --rm -p 4200:4200 dead-by-daylight
+```
+
+- Finally, in the browser of your choice, access the following url:
+
+http://localhost:4200
+
+You should now be accessing the Quarto Presentation reviewing my Data Visualization project based on the online game 'Dead by Daylight'.
 
 
 ## Requirements
