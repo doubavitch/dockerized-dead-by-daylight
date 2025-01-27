@@ -5,7 +5,7 @@
 - In your terminal, clone this repository and work within the folder created locally:
 
 ```
-git@github.com:doubavitch/dockerized-dead-by-daylight.git
+git clone git@github.com:doubavitch/dockerized-dead-by-daylight.git
 cd dockerized-dead-by-daylight
 ```
 
