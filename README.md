@@ -35,4 +35,5 @@ You should now be accessing the Quarto Presentation reviewing my Data Visualizat
 ## Requirements
 
 You need to have Docker installed.
-If that is not the case, visit the following website: https://docs.docker.com/engine/install/
+
+If that is not the case, visit the following website: https://docs.docker.com/engine/install/.
