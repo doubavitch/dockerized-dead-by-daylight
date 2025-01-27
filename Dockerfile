@@ -36,7 +36,7 @@ WORKDIR project
 
 RUN apt-get install libmpfr-dev
 
-RUN R -e "install.packages(c('renv', 'knitr', 'rmarkdown'))"
+RUN R -e "install.packages(c('renv', 'targets', 'knitr', 'rmarkdown'))"
 
 RUN R -e "renv::restore()"
 
