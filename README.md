@@ -1,4 +1,4 @@
-# Dockerized Dead By Daylight Data Visualization
+# Dockerized 'Dead By Daylight' Data Visualization
 
 ## How to run this pipeline
 
