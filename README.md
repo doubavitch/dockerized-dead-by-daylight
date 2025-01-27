@@ -2,6 +2,10 @@
 
 ## How to run this pipeline
 
+- Clone this repoitory:
+
+```
+
 
 ## Requirements
 
