@@ -17,7 +17,7 @@ cd dockerized-dead-by-daylight
 docker build -t dead-by-daylight .
 ```
 
-Note that this step might take a while the first time (around 40 minutes). This is most due to the use of renv::restore(), a rather time-consuming command.
+Note that this step might take a while the first time (around 40 minutes). This is mostly due to the use of renv::restore(), a rather time-consuming command.
 
 - Run the pipeline:
 
