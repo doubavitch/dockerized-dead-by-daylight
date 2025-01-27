@@ -9,6 +9,8 @@ git@github.com:doubavitch/dockerized-dead-by-daylight.git
 cd dockerized-dead-by-daylight
 ```
 
+- Launch Docker on your machine.
+
 - Build the Docker image:
   
 ```
@@ -32,3 +34,4 @@ You should now be accessing the Quarto Presentation reviewing my Data Visualizat
 
 ## Requirements
 
+You need to have Docker installed.
