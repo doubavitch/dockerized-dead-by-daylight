@@ -29,11 +29,6 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.39/quar
     apt-get install --yes /home/quarto.deb && \
     rm /home/quarto.deb
 
-# Create a project directory and copy files
-RUN mkdir /project
-COPY . /project
-WORKDIR /project
-
 RUN apt-get install libmpfr-dev
 
 RUN R -e "install.packages(c('renv', 'targets', 'tarchetypes', 'knitr', 'rmarkdown'))"
