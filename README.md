@@ -37,3 +37,7 @@ You should now be accessing the Quarto Presentation reviewing my Data Visualizat
 You need to have Docker installed.
 
 If that is not the case, visit the following website: https://www.docker.com/get-started/.
+
+## Disclaimer
+
+This project was built and tested on a MacOS machine, it is therefore probable that the provided Dockerfile and its subsequent installations would not properly work for other Operating Systems. If that were to be the case, please raise an issue here.
