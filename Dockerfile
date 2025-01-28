@@ -31,6 +31,10 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.39/quar
 
 RUN apt-get install libmpfr-dev
 
+# Copy renv files into the Docker image
+COPY renv/ .
+COPY renv.lock .
+
 RUN R -e "install.packages(c('renv', 'targets', 'tarchetypes', 'knitr', 'rmarkdown'))"
 
 RUN R -e "renv::restore()"
