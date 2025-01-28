@@ -25,19 +25,29 @@ RUN apt-get update && apt-get install -y \
     apt-get clean
 
 # Install Quarto
-RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.39/quarto-1.6.39-linux-arm64.deb -O /home/quarto.deb && \
+RUN ARCH=$(dpkg --print-architecture) && \
+    if [ "$ARCH" = "amd64" ]; then \
+        wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.39/quarto-1.6.39-linux-amd64.deb -O /home/quarto.deb; \
+    elif [ "$ARCH" = "arm64" ]; then \
+        wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.39/quarto-1.6.39-linux-arm64.deb -O /home/quarto.deb; \
+    else \
+        echo "Unsupported architecture: $ARCH" && exit 1; \
+    fi && \
     apt-get install --yes /home/quarto.deb && \
     rm /home/quarto.deb
 
-RUN apt-get install libmpfr-dev
+# Additional library installation
+RUN apt-get install -y libmpfr-dev
 
 # Create a project directory and copy files
 RUN mkdir /project
 COPY . /project
 WORKDIR /project
 
+# Install R packages
 RUN R -e "install.packages(c('renv', 'targets', 'tarchetypes', 'knitr', 'rmarkdown'))"
 
+# Restore R environment
 RUN R -e "renv::restore()"
 
 # Run the targets pipeline
