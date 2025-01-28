@@ -40,4 +40,4 @@ If that is not the case, visit the following website: https://www.docker.com/get
 
 ## Disclaimer
 
-This project was built and tested on a MacOS machine, it is therefore probable that the provided Dockerfile and its subsequent installations would not properly work for other Operating Systems. If that were to be the case, please raise an issue here.
+This project was built on a MacOS machine, and even though it was tested on both MacOS and Windows machines, it is still probable that the provided Dockerfile and its subsequent installations would not properly work for other Operating Systems. If that were to be the case, please raise an issue here.
