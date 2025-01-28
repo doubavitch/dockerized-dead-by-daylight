@@ -21,7 +21,7 @@ library(lattice)
 list(
   tar_target(
     dead_by_daylight,
-    read_csv("Dead by Daylight Data.csv")
+    read_csv("Dead by Daylight data.csv")
   ),
   
   # Killer Performance
